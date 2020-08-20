@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "pm2-test",
+      "cwd": "./",
+      "script":"server.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": "./logs/app-err.log",
+      "out_file": "./logs/app-out.log",
+      "exec_mode":"fork",
+      "watch": true,
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
